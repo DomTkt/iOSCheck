@@ -23,15 +23,21 @@ class ChecklistViewController: UITableViewController {
         //tabChecklistItem = [ChecklistItem(text: "test1"),ChecklistItem(text:"test2",checked:true)]
         
         
-        for i in 0  ..< 10  {
+        /*for i in 0  ..< 10  {
             tabChecklistItem.append(ChecklistItem(text: "Finir le cours d’iOS"+" "+String(i) ,checked: false))
         }
         tabChecklistItem[5].toogleChecked()
-        
-        
+        */
+        //loadChecklistItems()
         
         //ChecklistItem(text: "Finir le cours d’iOS"))
     }
+    
+    required init?(coder aDecoder: NSCoder){
+        super.init(coder: aDecoder)
+        loadChecklistItems()
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "AddItem"){
@@ -51,6 +57,7 @@ class ChecklistViewController: UITableViewController {
             targetController.delegate = self;
             targetController.Item = tabChecklistItem[(indexPath?.row)!]
             targetController.title = "Edit Text"
+            
             
             
             
@@ -87,6 +94,7 @@ class ChecklistViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         tabChecklistItem[indexPath.row].toogleChecked()
         tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        saveChecklistItems()
     }
     
     func configureCheckmarkFor(cell: UITableViewCell, withItem item: ChecklistItem)
@@ -127,6 +135,7 @@ class ChecklistViewController: UITableViewController {
         
         tabChecklistItem.remove(at: indexPath.row)
         listView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        saveChecklistItems()
         
     }
     
@@ -139,29 +148,47 @@ extension ChecklistViewController: AddItemViewControllerDelegate{
     
     func addItemViewControllerDidCancel(controller: AddItemViewController){
         dismiss(animated: true, completion: nil)
+        
 
     }
     func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem){
         tabChecklistItem.append(item)
         let indexPath = IndexPath(row: tabChecklistItem.count-1 , section: 0)
         listView.insertRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        saveChecklistItems()
     }
     
     func editItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem) {
         listView.reloadData()
+        saveChecklistItems()
     }
     
     func documentDirectory() -> URL{
         
-        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        print(documentDirectory)
-        return documentDirectory
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
     }
     
     func dataFileUrl() -> URL  {
-        return documentDirectory().appendingPathComponent("ChecklistItem.plist")
+        return documentDirectory().appendingPathComponent("Checklist.plist")
     }
+    
+    func saveChecklistItems(){
+
+        NSKeyedArchiver.archiveRootObject(self.tabChecklistItem, toFile: dataFileUrl().path)
+    
+    }
+    
+    func loadChecklistItems(){
+        if let list = (NSKeyedUnarchiver.unarchiveObject(withFile: dataFileUrl().path) as? [ChecklistItem]){
+            self.tabChecklistItem = list
+        }
+    }
+    
+    
+    
+    
     
     //func saveChecklistitems()
     
