@@ -148,7 +148,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7bY-hH-Qbn" kind="show" id="Fe5-Kg-NW5"/>
+                                    <segue destination="7bY-hH-Qbn" kind="show" identifier="4" id="Fe5-Kg-NW5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
