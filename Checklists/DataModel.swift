@@ -13,7 +13,8 @@ class DataModel {
     static let sharedInstance = DataModel()
     private init() {
         self.list = [Checklist]()
-        loadChecklistItems();
+        loadChecklistItems()
+        sortChecklists()
         
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(DataModel.saveChecklistItems), name: .UIApplicationDidEnterBackground, object: nil)
@@ -49,6 +50,9 @@ extension DataModel{
         }
     }
     
+    func sortChecklists(){
+        self.list = self.list.sorted(by: { $0.text < $1.text })
+    }
     
 
     
