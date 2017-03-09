@@ -8,10 +8,11 @@
 
 import UIKit
 
-class Checklist: NSObject {
+class Checklist: NSObject,NSCoding {
     
     var text: String
     var item: [ChecklistItem]
+    
     var uncheckedItemsCount: Int {
         get{
             return item.filter { (selectedItem : ChecklistItem) -> Bool in
@@ -20,6 +21,7 @@ class Checklist: NSObject {
         }
     }
     
+ 
     init(txt:String) {
         self.text = txt
         item = [ChecklistItem]()
@@ -47,6 +49,8 @@ class Checklist: NSObject {
         aCoder.encode(self.item, forKey: "checklist")
     }
 
+    
+   
 
 }
 

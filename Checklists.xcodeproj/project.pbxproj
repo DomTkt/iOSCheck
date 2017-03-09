@@ -16,6 +16,7 @@
 		B861695A1E6827C8000B40D1 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86169591E6827C8000B40D1 /* Checklist.swift */; };
 		B867F0C81E6808C700CB4714 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867F0C71E6808C700CB4714 /* ListDetailViewController.swift */; };
 		B867F0CA1E680E7F00CB4714 /* AllListViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867F0C91E680E7F00CB4714 /* AllListViewController2.swift */; };
+		B89464961E7152BC006E1206 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89464951E7152BC006E1206 /* DataModel.swift */; };
 		B8C80B511E4364FC00A8C8D6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C80B501E4364FC00A8C8D6 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		B86169591E6827C8000B40D1 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		B867F0C71E6808C700CB4714 /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		B867F0C91E680E7F00CB4714 /* AllListViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListViewController2.swift; sourceTree = "<group>"; };
+		B89464951E7152BC006E1206 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B8C80B501E4364FC00A8C8D6 /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				B867F0C91E680E7F00CB4714 /* AllListViewController2.swift */,
 				B867F0C71E6808C700CB4714 /* ListDetailViewController.swift */,
 				B86169591E6827C8000B40D1 /* Checklist.swift */,
+				B89464951E7152BC006E1206 /* DataModel.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				B8C80B511E4364FC00A8C8D6 /* AddItemViewController.swift in Sources */,
 				B867F0C81E6808C700CB4714 /* ListDetailViewController.swift in Sources */,
 				B822DF391E432A67005D8E2B /* ChecklistItem.swift in Sources */,
+				B89464961E7152BC006E1206 /* DataModel.swift in Sources */,
 				B822DF271E431FC0005D8E2B /* AppDelegate.swift in Sources */,
 				B861695A1E6827C8000B40D1 /* Checklist.swift in Sources */,
 			);

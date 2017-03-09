@@ -75,9 +75,9 @@ protocol AddItemViewControllerDelegate : class {
     func addItemViewControllerDidCancel(controller: AddItemViewController)
     func addItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem)
     func editItemViewController(controller: AddItemViewController, didFinishAddingItem item: ChecklistItem)
-    func documentDirectory() -> URL
+    /*func documentDirectory() -> URL
     func dataFileUrl() -> URL
-    
+    */
     
 }
 

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Checklist-->
+        <!--Liste des sous tâche-->
         <scene sceneID="owe-gv-rDh">
             <objects>
                 <tableViewController id="7bY-hH-Qbn" customClass="ChecklistViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PAg-ln-5me" id="z7e-22-aWa">
-                                    <frame key="frameInset" width="308" height="44"/>
+                                    <frame key="frameInset" width="308" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✔️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnI-LX-q8G">
@@ -49,7 +49,7 @@
                             <outlet property="delegate" destination="7bY-hH-Qbn" id="rCB-vr-Jbj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist" id="TNl-iy-4OW">
+                    <navigationItem key="navigationItem" title="Liste des sous tâche" id="TNl-iy-4OW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yOf-7B-G1A">
                             <connections>
                                 <segue destination="cRj-xn-dnq" kind="presentation" identifier="AddItem" id="eh3-gw-o87"/>
@@ -65,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="775.20000000000005" y="-146.17691154422789"/>
         </scene>
-        <!--Add Item-->
+        <!--Ajout d'une sous tâche-->
         <scene sceneID="QFX-mL-nq5">
             <objects>
                 <tableViewController id="gHN-CS-Ajq" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                                         <rect key="frame" x="0.0" y="99" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yyG-LE-JCz" id="oIX-lW-LAX">
-                                            <frame key="frameInset" width="375" height="44"/>
+                                            <frame key="frameInset" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Taper ce que vous voulez ajoutez" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-Fe-D6C">
@@ -110,7 +110,7 @@
                             <outlet property="delegate" destination="gHN-CS-Ajq" id="nyf-mJ-SX4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Item" id="iXn-ft-A75">
+                    <navigationItem key="navigationItem" title="Ajout d'une sous tâche" id="iXn-ft-A75">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QgG-aZ-I4a">
                             <connections>
                                 <action selector="cancel" destination="gHN-CS-Ajq" id="nRd-bl-3xo"/>
@@ -131,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="2727.1999999999998" y="-140.77961019490255"/>
         </scene>
-        <!--Checklist-->
+        <!--Liste de tâche-->
         <scene sceneID="40c-I2-9Go">
             <objects>
                 <tableViewController id="R2v-oY-sZI" customClass="AllListViewController2" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,15 +140,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="AllListItem" id="yQn-E1-LGZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="AllListItem" textLabel="hTU-Jp-STw" detailTextLabel="2qS-AO-6gM" style="IBUITableViewCellStyleSubtitle" id="yQn-E1-LGZ">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQn-E1-LGZ" id="Qdi-zW-bsT">
-                                    <frame key="frameInset" width="308" height="44"/>
+                                    <frame key="frameInset" width="308" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hTU-Jp-STw">
+                                            <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2qS-AO-6gM">
+                                            <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7bY-hH-Qbn" kind="show" identifier="4" id="Fe5-Kg-NW5"/>
+                                    <segue destination="BQq-AZ-JhI" kind="presentation" identifier="EditItemListe" trigger="accessoryAction" id="JIg-13-L0i"/>
+                                    <segue destination="7bY-hH-Qbn" kind="show" identifier="ChecklistContenu" id="JWq-IM-8Kd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -157,7 +174,13 @@
                             <outlet property="delegate" destination="R2v-oY-sZI" id="0Zf-hJ-OjQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklist" id="n5M-sR-UBf"/>
+                    <navigationItem key="navigationItem" title="Liste de tâche" id="n5M-sR-UBf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YLO-Kn-jbn">
+                            <connections>
+                                <segue destination="BQq-AZ-JhI" kind="presentation" identifier="AddItemListe" id="lJE-qC-IiM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZG-3h-EKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,8 +222,91 @@
             </objects>
             <point key="canvasLocation" x="1788" y="-140.77961019490255"/>
         </scene>
+        <!--Nouvelle tâche-->
+        <scene sceneID="s7A-tw-riL">
+            <objects>
+                <tableViewController id="fy7-TI-cL5" customClass="ListDetailViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ai6-UM-chb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Zfg-sH-HaR">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eur-CB-bmT">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eur-CB-bmT" id="fWK-BW-jbb">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Taper la tâche que vous voulez ajoutez" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-18-ZVF">
+                                                    <frame key="frameInset" minY="7" width="375" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="txtInputChanged:" destination="fy7-TI-cL5" eventType="editingChanged" id="Aue-G3-oQa"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fy7-TI-cL5" id="RaE-Dx-KUk"/>
+                            <outlet property="delegate" destination="fy7-TI-cL5" id="2ii-QA-UPQ"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Nouvelle tâche" id="tXG-0J-4LK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="19y-Ll-YPx">
+                            <connections>
+                                <action selector="cancel" destination="fy7-TI-cL5" id="Sfu-tD-69a"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="FaT-UR-RWx">
+                            <connections>
+                                <action selector="done" destination="fy7-TI-cL5" id="F7b-kC-awr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="AddBt" destination="FaT-UR-RWx" id="pyd-7l-QKX"/>
+                        <outlet property="cancelBt" destination="19y-Ll-YPx" id="Gbp-ia-bOq"/>
+                        <outlet property="doneBarButton" destination="FaT-UR-RWx" id="trQ-JZ-b8H"/>
+                        <outlet property="txtInput" destination="9Pd-18-ZVF" id="YJP-SM-YxA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGA-25-tB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512.79999999999995" y="698.5007496251875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ri-El-F5W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BQq-AZ-JhI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Ky-5f-5rx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fy7-TI-cL5" kind="relationship" relationship="rootViewController" id="dSD-pD-gbN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAR-2M-SXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426.39999999999998" y="698.5007496251875"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="JIg-13-L0i"/>
         <segue reference="CVq-eq-IpU"/>
     </inferredMetricsTieBreakers>
 </document>
